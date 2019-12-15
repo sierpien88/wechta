@@ -1,0 +1,150 @@
+/*-------------------------------------------------------------------------------------
+Theme Name:	Wechta
+Theme URI: 	wechta.pl
+Version:	1.0.0
+Author:		Agata Stepnik (stepnikagata.pl)
+-------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------
+[TABLE OF CONTENTS]
+
+	00. IMPORT
+	01. GENERAL
+	02. HEADER
+	03. MAIN IMAGE SECTION
+	04. SLIDER
+    05. NEWS SECTION - Home page
+    06. FOOTER
+    
+
+	11. BLOG
+	
+	
+-------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+/*	00. IMPORT
+/*-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+/*	01. GENERAL
+/*-----------------------------------------------------------------------------------*/
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 17px;
+  color: #000; }
+
+.blue {
+  color: #0081d3; }
+
+.grey {
+  color: #959595; }
+
+.white {
+  color: #fff; }
+
+.bigger-text {
+  font-size: 1.5em; }
+
+.ml-25 {
+  margin-left: 25%; }
+
+.blue-bg-full {
+  background-color: rgba(0, 129, 211, 0.05); }
+
+.blue-bg-cut {
+  background: url(../images/background-blue.png) bottom right no-repeat;
+  background-size: cover; }
+
+/*-----------------------------------------------------------------------------------*/
+/*	02. HEADER
+/*-----------------------------------------------------------------------------------*/
+.header-img {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+nav {
+  font-size: 0.7em; }
+  nav a {
+    color: #000; }
+
+.nav-tabs {
+  margin-left: 12.6em;
+  border-bottom: none; }
+  .nav-tabs .nav-link {
+    padding: 20px; }
+    .nav-tabs .nav-link.active {
+      color: #fff;
+      border-radius: 0;
+      background-color: transparent;
+      position: relative;
+      border: none;
+      z-index: 1; }
+      .nav-tabs .nav-link.active:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        display: block;
+        transform: skew(-25deg);
+        background-color: #0081d3;
+        border: 1px solid #0081d3;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1; }
+  .nav-tabs .estate-link {
+    font-size: 1.2em; }
+
+/*-----------------------------------------------------------------------------------*/
+/*	03. MAIN IMAGE SECTION
+/*-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+/*	04. SLIDER
+/*-----------------------------------------------------------------------------------*/
+.slick-slide {
+  margin: 0 15px; }
+
+/* the parent */
+.slick-list {
+  margin: 0 -15px; }
+
+/*-----------------------------------------------------------------------------------*/
+/*	05. NEWS SECTION - Home page
+/*-----------------------------------------------------------------------------------*/
+.img-news {
+  max-width: 300px; }
+
+.news-text__date {
+  font-size: 0.9em; }
+.news-text__title {
+  font-size: 1.4em;
+  line-height: 1.4; }
+.news-text__read-more-btn {
+  background: url(../images/news-bg.png) center right no-repeat;
+  background-size: 80%;
+  padding: 15px 30px 15px 0px; }
+
+/*-----------------------------------------------------------------------------------*/
+/*	06. FOOTER
+/*-----------------------------------------------------------------------------------*/
+footer {
+  background: #0081d3; }
+  footer .footer-text {
+    line-height: 0.5;
+    font-size: 1.2em; }
+  footer .footer-copyright {
+    line-height: 1; }
+
+/*-----------------------------------------------------------------------------------*/
+/*	06. RESPONSIVE
+/*-----------------------------------------------------------------------------------*/
+@media (max-width: 1199.98px) {
+  .img-news {
+    max-width: 100%; }
+
+  .nav-tabs {
+    margin-left: 0;
+    text-align: right; }
+
+  .nav-tabs .nav-link.active:before {
+    transform: none; } }
+
+/*# sourceMappingURL=style.css.map */
