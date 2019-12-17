@@ -25,5 +25,15 @@ Route::namespace('Admin')->name('admin.')->prefix('administracja')->group(functi
 
     Route::get('login', 'LoginController@index')->name('login');
 
+
+    Route::prefix('newsfeed')->name('newsfeed.')->group(function () {
+        Route::get('/', 'NewsfeedController@index')->name('index');
+        Route::get('/edit/{newsfeed}', 'NewsfeedController@edit')->name('edit');
+        Route::post('/update/{newsfeed}', 'NewsfeedController@update')->name('update');
+        Route::get('/create', 'NewsfeedController@create')->name('create');
+        Route::post('/store', 'NewsfeedController@store')->name('store');
+        Route::get('/destroy/{newsfeed}', 'NewsfeedController@destroy')->name('destroy');
+    });
+
 });
 Auth::routes();

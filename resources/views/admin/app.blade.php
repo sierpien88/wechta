@@ -52,6 +52,9 @@
                             <li>
                                 <a href="{{ route('admin.index') }}"><i class="fa fa-home"></i> Strona główna</a>
                             </li>
+                            <li>
+                                <a href="{{ route('admin.newsfeed.index') }}"><i class="fa fa-newspaper-o"></i> Newsfeed</a>
+                            </li>
                         </ul>
                     </div>
 
