@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Events\ChangeInDb;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\NewsfeedRequest;
 use App\Models\Newsfeed;
@@ -45,6 +46,7 @@ class NewsfeedController extends Controller
             $news->photo = $photo;
             $news->save();
         }
+        event(new ChangeInDb('newsfeed', $news->id, auth()->user()->id, 'add'));
 
         return redirect()->route('admin.newsfeed.index')->with('message', 'News został dodany');
     }
@@ -89,6 +91,8 @@ class NewsfeedController extends Controller
             $newsfeed->save();
         }
 
+        event(new ChangeInDb('newsfeed', $newsfeed->id, auth()->user()->id, 'edit'));
+
         return redirect()->route('admin.newsfeed.index')->with('message', 'News poprawnie edytowany');
     }
 
@@ -100,6 +104,7 @@ class NewsfeedController extends Controller
      */
     public function destroy(Newsfeed $newsfeed)
     {
+        event(new ChangeInDb('newsfeed', $newsfeed->id, auth()->user()->id, 'delete'));
         $newsfeed->delete();
         return redirect()->route('admin.newsfeed.index')->with('message', 'News został usunięty');
     }
