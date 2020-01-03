@@ -55,6 +55,9 @@
                             <li>
                                 <a href="{{ route('admin.newsfeed.index') }}"><i class="fa fa-newspaper-o"></i> Newsfeed</a>
                             </li>
+                            <li>
+                                <a href="{{ route('admin.apartment.index') }}"><i class="fa fa-newspaper-o"></i> Mieszkania</a>
+                            </li>
                         </ul>
                     </div>
 

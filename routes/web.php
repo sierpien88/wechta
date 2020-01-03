@@ -35,5 +35,14 @@ Route::namespace('Admin')->name('admin.')->prefix('administracja')->group(functi
         Route::get('/destroy/{newsfeed}', 'NewsfeedController@destroy')->name('destroy');
     });
 
+    Route::prefix('apartment')->name('apartment.')->group(function () {
+        Route::get('/', 'ApartmentController@index')->name('index');
+        Route::get('/edit/{apartment}', 'ApartmentController@edit')->name('edit');
+        Route::post('/update/{apartment}', 'ApartmentController@update')->name('update');
+        Route::get('/create', 'ApartmentController@create')->name('create');
+        Route::post('/store', 'ApartmentController@store')->name('store');
+        Route::get('/destroy/{apartment}', 'ApartmentController@destroy')->name('destroy');
+    });
+
 });
 Auth::routes();
